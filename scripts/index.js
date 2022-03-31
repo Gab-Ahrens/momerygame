@@ -2,14 +2,14 @@ console.log("Hello World");
 const imgCollection = document.getElementsByClassName("game-img");
 const controlBtn = document.getElementById("control-btn");
 
-const game = new Game(5);
+const game = new Game(5, imgCollection);
 
 controlBtn.addEventListener("click", () => {
   if (controlBtn.innerText === "Start") {
-    game.startGame(imgCollection);
+    game.startGame();
     controlBtn.innerText = "Reset";
   } else if (controlBtn.innerText === "Reset") {
-    game.resetGame(imgCollection);
+    game.resetGame();
     controlBtn.innerText = "Start";
   }
 });
