@@ -28,6 +28,17 @@ class Game {
     }
 
     // FALTA EMBARALHAR
+
+    for (let i = 0; i < positions.length; i++) {
+      const RNG = Math.floor(Math.random() * positions.length);
+
+      const memory = positions[i];
+
+      positions[i] = positions[RNG];
+
+      positions[RNG] = memory;
+    }
+
     return positions;
   }
 
